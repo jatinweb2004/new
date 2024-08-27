@@ -12,7 +12,9 @@ const Login = () => {
     const navigate = useNavigate()
     //Form Submit
     const submitHandler = async (values) => {
+      
         try {
+            console.log(values);
             setLaoding(true);
             const { data } = await axios.post(`${SERVER_URL}/users/login`, values);
             setLaoding(false);
