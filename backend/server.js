@@ -16,7 +16,7 @@ connectDb();
 
 //rest object
 const app = express()
-app.use(cors({origin:["http://localhost:3000", "https://mon-track.vercel.app"]}));
+app.use(cors({origin:["http://localhost:3000", "https://new-front-navy.vercel.app"]}));
 
 //middlewares
 app.use(morgan('dev'))
