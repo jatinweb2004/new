@@ -32,6 +32,10 @@ app.use('/api/v1/transactions', require('./routes/transactionRoutes'))
 //port
 const PORT = 8080 || process.env.PORT
 
+app.get("/", (req, res) => {
+    res.json({ message: "Welcome to the API!" });
+});
+
 //listen Server
 app.listen(PORT, () => {
     console.log(`Server is running on PORT : ${PORT}`);
