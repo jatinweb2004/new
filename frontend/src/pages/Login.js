@@ -7,14 +7,17 @@ import Header from '../components/layout/Header';
 
 
 const Login = () => {
-    const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+    const SERVER_URL = "http://localhost:3000";
     const [loading, setLaoding] = useState(false)
     const navigate = useNavigate()
     //Form Submit
     const submitHandler = async (values) => {
+
         try {
+            console.log(values);
             setLaoding(true);
             const { data } = await axios.post(`${SERVER_URL}/users/login`, values);
+            
             setLaoding(false);
             message.success("Login Success");
             localStorage.setItem('user', JSON.stringify({ ...data.user, password: " " }))

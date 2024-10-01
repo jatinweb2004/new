@@ -10,7 +10,7 @@ import Analytics from '../components/Analytics';
 const { RangePicker } = DatePicker;
 
 const HomePage = () => {
-  const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+  const SERVER_URL = "http://localhost:3000";
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [allTransaction, setAllTransaction] = useState([]);

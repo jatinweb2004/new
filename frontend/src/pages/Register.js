@@ -5,7 +5,7 @@ import axios from 'axios'
 import Spinner from '../components/Spinner'
 
 const Register = () => {
-    const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+    const SERVER_URL = "http://localhost:3000";
     const navigate = useNavigate()
     const [laoding, setLaoding] = useState(false)
     //Form Submit
